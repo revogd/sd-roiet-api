@@ -4,8 +4,6 @@ const mysql = require('mysql2')
 const cors = require('cors')
 const port = process.env.PORT || 3001
 
-//const soldier = require('./model/soldier')
-
 app.use(express.json())
 app.use(cors())
 
@@ -37,7 +35,7 @@ app.get('/soldiers', (req, res) => {
 app.get('/soldier/:pid', (req, res) => {
     const pid = req.params.pid;
     db.query("SELECT เลขประจำตัวประชาชน,ชื่อ,นามสกุล,เกิด,อำเภอ,จังหวัด, FROM TB_Recuit WHERE เลขประจำตัวประชาชน = ?", 
-    [pid], 
+    [pid],
     (err, result) => {
         
         
