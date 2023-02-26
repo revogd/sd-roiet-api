@@ -32,10 +32,9 @@ app.get('/soldiers', (req, res) => {
     });
 });
 
-app.get('/soldier/:pid', (req, res) => {
-    const pid = req.params.pid;
+app.get('/soldier/:pid', (req, res) => {    
     db.query("SELECT เลขประจำตัวประชาชน,ชื่อ,นามสกุล,เกิด,อำเภอ,จังหวัด, FROM TB_Recuit WHERE เลขประจำตัวประชาชน=?",
-    pid,
+    [req.params.pid],
     (err, result) => {
         
         
