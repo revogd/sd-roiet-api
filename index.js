@@ -17,7 +17,7 @@ const db = mysql.createConnection({
 
 db.connect(function(err) {
     if (err) throw err;
-    console.log("Database Connected!");
+    console.log("Mysql database Connected!");
   });
 
 app.get('/soldiers', (req, res) => {
