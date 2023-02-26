@@ -34,7 +34,7 @@ app.get('/soldiers', (req, res) => {
 });
 
 app.get('/soldier/:pid', (req, res) => {    
-    db.query("SELECT เลขประจำตัวประชาชน,ชื่อ,นามสกุล,วันเกิด เดือนเกิด,เกิด,ตำบล,อำเภอ,จังหวัด FROM TB_Recuit WHERE เลขประจำตัวประชาชน=?",
+    db.query("SELECT เลขประจำตัวประชาชน,ชื่อ,นามสกุล,วัน เกิด เดือน เกิด,เกิด,ตำบล,อำเภอ,จังหวัด FROM TB_Recuit WHERE เลขประจำตัวประชาชน=?",
     [req.params.pid],
     (err, result) => {
         
