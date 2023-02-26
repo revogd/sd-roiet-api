@@ -26,7 +26,7 @@ app.get('/soldiers', (req, res) => {
             console.log(err);
         } else {
             res.send(result);
-            console.log("Sadsadee Roiet Database Connected");
+            console.log("Get by criteria successfully");
             
         }
     });
@@ -43,7 +43,7 @@ app.get('/soldier/:pid', (req, res) => {
             console.log(err);
         } else {
             res.send(result);
-            console.log("Sadsadee Roiet Database Connected");
+            console.log("Get by id successfully");
             
         }
     });
