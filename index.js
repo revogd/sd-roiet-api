@@ -9,11 +9,11 @@ app.use(express.json())
 app.use(cors())
 
 const db = mysql.createConnection({
-    user: process.env.user,
-    host: process.env.host,
-    password: process.env.password,
-    database: process.env.database,
-    port: process.env.port
+    user: process.env.USER,
+    host: process.env.HOST,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE,
+    port: process.env.PORT
 })
 
 db.connect(function(err) {
