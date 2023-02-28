@@ -9,7 +9,7 @@ app.use(cors())
 
 const db = mysql.createConnection({
     user: "sadsadee_roiet",
-    host: "202.129.206.159",
+    host: "202.129.207.6",
     password: "Roiet101",
     database: "sadsadee_roiet",
     port: "3306"
@@ -26,7 +26,7 @@ app.get('/soldiers', (req, res) => {
             console.log(err);
         } else {
             res.send(result);
-            console.log("Sadsadee Roiet Database Connected");
+            console.log("Get by criteria successfully");
             
         }
     });
@@ -43,7 +43,7 @@ app.get('/soldier/:pid', (req, res) => {
             console.log(err);
         } else {
             res.send(result);
-            console.log("Sadsadee Roiet Database Connected");
+            console.log("Get by id successfully");
             
         }
     });
