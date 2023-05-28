@@ -21,7 +21,7 @@ db.connect(function(err) {
   });
 
 app.get('/soldiers', (req, res) => {
-    db.query("SELECT เลขประจำตัวประชาชน, ชื่อ, นามสกุล, เกิด, บ้านเลขที่, หมู่ที่, ตำบล, อำเภอ, จังหวัด, Datelogin,เหตุจำหน่าย FROM TB_Recuit WHERE อำเภอ='เมยวดี' ORDER BY เกิด ASC", (err, result) => {
+    db.query("SELECT id, เลขประจำตัวประชาชน, ชื่อ, นามสกุล, เกิด, บ้านเลขที่, หมู่ที่, ตำบล, อำเภอ, จังหวัด, Datelogin,เหตุจำหน่าย FROM TB_Recuit WHERE อำเภอ='เมยวดี' ORDER BY เกิด ASC", (err, result) => {
         if (err) {
             console.log(err);
         } else {
