@@ -33,9 +33,9 @@ app.get('/soldiers', (req, res) => {
     });
 });
 
-app.get('/soldier/:itemId', (req, res) => {    
+app.get('/soldier/:id', (req, res) => {    
     db.query("SELECT ID, เลขประจำตัวประชาชน,ชื่อ,นามสกุล,วัน เกิด,เดือน เกิด,เกิด,ตำบล,อำเภอ,จังหวัด FROM TB_Recuit WHERE ID=?",
-    [req.params.itemId],
+    [req.params.id],
     (err, result) => {      
         
         if (err) {
