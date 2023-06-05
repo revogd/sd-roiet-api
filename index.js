@@ -43,6 +43,7 @@ app.get('/soldier/:id', (req, res) => {
         } else {
             res.send(result);
             console.log("Get by id successfully");
+            console.log(result);
             
         }
     });
