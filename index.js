@@ -34,10 +34,9 @@ app.get('/soldiers', (req, res) => {
 
 app.get('/soldier/:id', (req, res) => {
     const id = req.params.id;
-    db.query("SELECT เลขประจำตัวประชาชน,ชื่อ,นามสกุล,เกิด,อำเภอ,จังหวัด, FROM TB_Recuit WHERE ID = ?", 
+    db.query('SELECT เลขประจำตัวประชาชน, ชื่อ, นามสกุล, เกิด, อำเภอ, จังหวัด FROM TB_Recuit WHERE ID = ?', 
     [id],
-    (err, result) => {
-        
+    (err, result) => {       
         
         if (err) {
             console.log(err);
