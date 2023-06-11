@@ -42,7 +42,8 @@ app.get('/soldier/:id', (req, res) => {
             console.log(err);
         } else {
             res.send(result);
-            console.log("Get by id ${ID} successfully");
+            console.log("Get by id successfully");
+            console.log({id});
             
         }
     });
